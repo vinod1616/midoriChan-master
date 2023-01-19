@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midori Chan</title>
+    <link rel="icon" type="image/png" href="/image/weather/water.png" />
+    <link rel="stylesheet" href="/css/midori.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer src="/js/app.js"></script>
+    {{!-- <script defer  src="/js/weather.js"></script> --}}
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div>
+                <img src="/image/logo.png" alt="">
+                <span>Greening Solutions</span>
+            </div>
+        </div>
+        <div class="midori">
+            <div class="user">
+                <img src="/image/user.png" alt="">
+                <span id="displayUser"></span>
+            </div>
+            <div class="dateshow">
+
+            </div>
+            <div class="diagram">
+
+                <div class="water-level">
+                    <div class="card-temp">
+                        <div class="icon">
+                            <img src="/image/weather/temperature.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="in-info">
+                                <p id="tempValue" class="info-figure">00</p>
+                                <p class="info-describe">Temperature</p>
+                            </div>
+                        </div>
+                    </div>
+      
+                    <div class="card-temp">
+                        <div class="icon">
+                            <img src="/image/weather/humidity.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="in-info">
+                                <p id="humidityValue" class="info-figure">00</p>
+                                <p class="info-describe">Humidity</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-temp">
+                        <div class="icon">
+                            <img src="/image/weather/water.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="in-info">
+                                <p class="info-figure waterlevel"></p>
+                                <p class="info-describe">Water level</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-temp">
+                        <div class="icon">
+                            <img id="img1-01" src="/image/weather/pump-off.png" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="in-info">
+                                <p id="pump" class="info-figure">Off</p>
+                                <p class="info-describe">Pump</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal">
+
+                    <img src="/image/grass.png" id="g1" alt="">
+                    <img src="/image/grass.png" id="g2" alt="">
+                    <img src="/image/grass.png" id="g3" alt="">
+                    <div class="soil">
+                        <div class="meter">
+                            <span>100</span>
+                            <span>75</span>
+                            <span>50</span>
+                            <span>25</span>
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div class="water-meter">
+                        <img src="/image/wave.png" id="w1" alt="">
+                        <img src="/image/wave.png" id="w2" alt="">
+                        <img src="/image/wave.png" id="w3" alt="">
+                        <div class="divider">
+                            <img src="/image/weather/icons/desk.png" class=" desk-holder" alt="">
+                            <img src="/image/weather/icons/mob.png" class=" mob-holder" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dispanse">
+                    <div class="in-desp">
+                    <label class="switch">
+                        <input type="checkbox" id="g01-01" onchange="doalert(this)">
+                        <span class="slider round"></span>
+                    </label>
+                    <p >Dispense Water</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script defer src="/js/ax_scocketclient.js"></script>
+
+
+</html>

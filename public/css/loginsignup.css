@@ -1,0 +1,143 @@
+@font-face {
+  font-family: KumbhSans;
+  src: url("/fonts/Kumbh_Sans/KumbhSans-Regular.ttf");
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.header {
+  height: 100px;
+  /* padding: 15px; */
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  z-index: 9;
+  top: 0;
+  animation: goChan 4s ease-in;
+}
+.header span {
+  display: block;
+  color: rgb(0, 158, 79);
+  font-style: italic;
+  font-family: arial;
+}
+.login {
+  margin-top: 100px;
+  flex-grow: 1;
+  background-image: url("/image/wallpaper.png");
+  backdrop-filter: grayscale(0.5);
+  background-size: cover;
+  position: relative;
+}
+.login .login-box {
+  position: absolute;
+  width: 400px;
+  height: calc(100% - 100px);
+  background: rgb(255, 255, 255);
+  background-image: url("/image/loginbg.png");
+  background-size: cover;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+}
+.login .login-box .cred {
+  position: absolute;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  font-family: KumbhSans;
+  transform: translate(-50%, -50%);
+}
+
+.login .login-box .cred .heading-log {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+.login .login-box .cred form input {
+  margin-bottom: 15px;
+  width: 100%;
+  background: transparent !important;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  padding: 5px 0 0 5px;
+  color: rgb(253, 253, 253);
+  font-size: 16px;
+}
+.login .login-box .cred form input:focus {
+  border-bottom: 1px solid rgb(42, 255, 131);
+}
+.login .login-box .cred form input::placeholder {
+  color: rgba(255, 255, 255, 0.555);
+}
+
+.login .login-box .cred .login-options .loginIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  background: rgb(255, 255, 255);
+  outline: none;
+  position: relative;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.459);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .login-box .cred .login-options .loginIcon:active {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.144);
+}
+
+@keyframes goChan {
+  0% {
+    height: 100vh;
+    background: white;
+  }
+
+  70% {
+    height: 100vh;
+    background: rgb(255, 255, 255);
+  }
+  100% {
+    background: rgb(255, 255, 255);
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .login .login-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 0px;
+  }
+}
